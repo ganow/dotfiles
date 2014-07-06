@@ -14,4 +14,5 @@ NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bling/vim-airline'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
+NeoBundle 'airblade/vim-gitgutter'
 
