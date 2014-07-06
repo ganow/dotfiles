@@ -40,6 +40,7 @@ set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,default,latin
 
 "" INTERFACE
 set number
-colorscheme desert
-
+set cursorline
+set cursorcolumn
+" colorscheme desert
 

@@ -12,4 +12,6 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Townk/vim-autoclose'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle 'bling/vim-airline'
+NeoBundle 'tomasr/molokai'
+NeoBundle 'jpo/vim-railscasts-theme'
 
