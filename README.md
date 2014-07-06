@@ -3,6 +3,10 @@ dotfiles
 
 ## はじめにすること
 
+1. oh-my-zshのインストール
+2. neobundleのインストール
+3. 以下のコマンドを実行
+
 ```
 ln -s ~/dotfiles/.zshenv ~/.zshenv
 ln -s ~/dotfiles/.zshrc ~/.zshrc
