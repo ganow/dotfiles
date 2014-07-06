@@ -1,0 +1,45 @@
+""""""""""""""""""""""""""""
+""""" Pure Vim Setting """""
+""""""""""""""""""""""""""""
+
+"" INDENT
+setl autoindent smartindent expandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType python setl tabstop=4 shiftwidth=4 softtabstop=4
+
+"" UTIL
+set whichwrap=b,s,h,l,<,>,[,]
+set backspace=indent,eol,start
+set showmatch
+set autoread
+set laststatus=2
+
+"" カーソルを表示行で合わせる
+nnoremap j gj
+nnoremap k gk
+nnoremap <Down> gj
+nnoremap <Up> gk
+
+"" スペースキーによる画面移動
+nnoremap <SPACE> <PageDown>
+nnoremap <S-SPACE> <PageUp>
+map g<SPACE> G
+nnoremap <M-SPACE> i<SPACE><ESC><Right>
+
+vnoremap <SPACE> <C-d>
+vnoremap <S-SPACE> <C-u>
+
+"" SEARCH
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+"" ENCODING
+set encoding=utf-8
+set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,default,latin
+
+"" INTERFACE
+set number
+colorscheme desert
+
+
