@@ -10,6 +10,10 @@ if filereadable(expand('$ZDOTDIR/.vimrc.neobundle'))
   endif
 endif
 
+if filereadable(expand('$ZDOTDIR/.vimrc.filetype'))
+  source $ZDOTDIR/.vimrc.filetype
+endif
+
 if filereadable(expand('$ZDOTDIR/.vimrc.pure'))
   source $ZDOTDIR/.vimrc.pure
 endif
