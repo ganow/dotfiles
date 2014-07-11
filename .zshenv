@@ -1,2 +1,2 @@
-export ZDOTDIR=$HOME/dotfiles
+export ZDOTDIR=$HOME/local/src/github.com/ganow/dotfiles
 

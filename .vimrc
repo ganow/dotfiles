@@ -1,16 +1,16 @@
-if filereadable(expand('$HOME/dotfiles/.vimrc.neobundle'))
-  source $HOME/dotfiles/.vimrc.neobundle
+if filereadable(expand('$ZDOTDIR/.vimrc.neobundle'))
+  source $ZDOTDIR/.vimrc.neobundle
   
-  if filereadable(expand('$HOME/dotfiles/.vimrc.plugin'))
-    source $HOME/dotfiles/.vimrc.plugin
+  if filereadable(expand('$ZDOTDIR/.vimrc.plugin'))
+    source $ZDOTDIR/.vimrc.plugin
   endif
 
-  if filereadable(expand('$HOME/dotfiles/.vimrc.plugin-settings'))
-    source $HOME/dotfiles/.vimrc.plugin-settings
+  if filereadable(expand('$ZDOTDIR/.vimrc.plugin-settings'))
+    source $ZDOTDIR/.vimrc.plugin-settings
   endif
 endif
 
-if filereadable(expand('$HOME/dotfiles/.vimrc.pure'))
-  source $HOME/dotfiles/.vimrc.pure
+if filereadable(expand('$ZDOTDIR/.vimrc.pure'))
+  source $ZDOTDIR/.vimrc.pure
 endif
 
