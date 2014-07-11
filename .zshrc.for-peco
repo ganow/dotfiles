@@ -91,3 +91,19 @@ function peco-open() {
   fi
 }
 
+## git-diff
+function peco-git-diff() {
+  git rev-parse --git-dir >/dev/null 2>&1
+  if [[ $? == 0 ]]; then
+    local target
+    if [[ $# -eq 0 ]]; then
+      target=$(git diff --stat $(git symbolic-ref HEAD 2>/dev/null) | peco | awk '{print $1}')
+    else
+      target=$(git diff --stat $1 | peco | awk '{print $1}')
+    fi
+    if [[ -n $target ]]; then
+      vimdiff <(git show $1:$target) $target
+    fi
+  fi
+}
+
