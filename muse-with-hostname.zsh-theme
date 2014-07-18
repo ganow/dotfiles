@@ -2,6 +2,7 @@
 #local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
 
 # put this code on $OH-MY-ZSH-DIR/custom
+# the code is based on muse
 
 setopt promptsubst
 
@@ -22,7 +23,6 @@ GIT_CLEAN_COLOR=$FG[118]
 GIT_PROMPT_INFO=$FG[117]
 PYENV_PROMPT_INFO=$FG[117]
 
-# PROMPT='%{$fg_bold[blue]%}%M %{$PROMPT_SUCCESS_COLOR%}%~%{$reset_color%} %{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PROMPT_PROMPT%}ᐅ%{$reset_color%} '
 PROMPT='%{$FG[220]%}%M %{$PROMPT_SUCCESS_COLOR%}%(5~,%-2~/.../%2~,%~)%{$reset_color%}%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PYENV_PROMPT_INFO%}$(_pyenv_prompt_info)%{$reset_color%}%{$PROMPT_PROMPT%}ᐅ%{$reset_color%} '
 
 #RPS1="${return_code}"
