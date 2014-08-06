@@ -80,3 +80,13 @@ endif
 set t_Co=256
 colorscheme railscasts
 
+
+""""""""""""""""
+""" clever-f """
+""""""""""""""""
+
+let g:clever_f_across_no_line = 0 " search a character across multi lines
+let g:clever_f_ignore_case = 1
+let g:clever_f_smart_case = 1
+let g:clever_f_use_migemo = 1 " for japanese environment
+

@@ -15,4 +15,5 @@ NeoBundle 'bling/vim-airline'
 NeoBundle 'tomasr/molokai'
 NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'airblade/vim-gitgutter'
+NeoBundle 'rhysd/clever-f.vim'
 
