@@ -18,4 +18,5 @@ NeoBundle 'jpo/vim-railscasts-theme'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
+NeoBundle 'kien/ctrlp.vim'
 
