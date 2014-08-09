@@ -19,4 +19,5 @@ NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'rhysd/clever-f.vim'
 NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mattn/emmet-vim'
 
