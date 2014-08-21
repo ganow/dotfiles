@@ -12,6 +12,7 @@ set backspace=indent,eol,start
 set showmatch
 set autoread
 set laststatus=2
+set noswapfile
 
 "" カーソルを表示行で合わせる
 nnoremap j gj
