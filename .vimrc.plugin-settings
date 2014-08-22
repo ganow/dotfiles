@@ -73,6 +73,14 @@ if has('conceal')
 endif
 
 
+""""""""""""""""
+""" vimfiler """
+""""""""""""""""
+
+" set vimfiler as default
+let g:vimfiler_as_default_explorer = 1
+
+
 """""""""""""""""""""""""
 """ Theme, railscasts """
 """""""""""""""""""""""""
@@ -104,6 +112,16 @@ map <Leader> <Plug>(easymotion-prefix)
 
 let g:ctrlp_working_path_mode = 0
 
+
+"""""""""""""""""
+""" gitgutter """
+"""""""""""""""""
+
+let g:gitgutter_sign_added = '✚'
+let g:gitgutter_sign_modified = '➜'
+let g:gitgutter_sign_removed = '✘'
+
+
 """""""""""""""""""""
 """ lightline.vim """
 """""""""""""""""""""
@@ -124,7 +142,9 @@ let g:lightline = {
         \   'fileencoding': 'MyFileencoding',
         \   'mode': 'MyMode',
         \   'gitgutter': 'MyGitGutter'
-        \ }
+        \ },
+        \ 'separator': {'left': '⮀', 'right': '⮂'},
+        \ 'subseparator': {'left': '⮁', 'right': '⮃'}
         \ }
 
 function! MyModified()
