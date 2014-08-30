@@ -111,6 +111,7 @@ map <Leader> <Plug>(easymotion-prefix)
 """""""""""""""""
 
 let g:ctrlp_working_path_mode = 0
+let g:ctrlp_dotfiles = 1
 
 
 """""""""""""""""
