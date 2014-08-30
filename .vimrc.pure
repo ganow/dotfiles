@@ -43,6 +43,7 @@ set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,default,latin
 set number
 set cursorline
 set cursorcolumn
+set colorcolumn=80,110
 " colorscheme desert
 if has("mouse")
   set mouse=a
