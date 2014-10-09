@@ -7,3 +7,6 @@ au BufWritePre *.go Fmt
 set rtp+=$GOROOT/misc/vim
 exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 
+" cpp
+au BufNewFile,BufRead *.cc setf cpp
+
