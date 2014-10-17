@@ -10,3 +10,6 @@ exe "set rtp+=".globpath($GOPATH, "src/github.com/nsf/gocode/vim")
 " cpp
 au BufNewFile,BufRead *.cc setf cpp
 
+" rust
+au BufNewFile,BufRead *.rs set filetype=rust
+
