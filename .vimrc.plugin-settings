@@ -110,8 +110,8 @@ map <Leader> <Plug>(easymotion-prefix)
 """ ctrlp.vim """
 """""""""""""""""
 
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_dotfiles = 1
+" let g:ctrlp_working_path_mode = 0
+" let g:ctrlp_dotfiles = 1
 
 
 """""""""""""""""
