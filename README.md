@@ -5,7 +5,8 @@ dotfiles
 
 1. oh-my-zshのインストール
 2. neobundleのインストール
-3. 以下のコマンドを実行
+3. enhancdのインストール
+4. 以下のコマンドを実行
 
 ```
 ln -s $ZDOTDIR/.zshenv ~/.zshenv

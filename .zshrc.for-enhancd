@@ -1,0 +1,5 @@
+# enhancd
+if [ -f "$HOME/.enhancd/zsh/enhancd.zsh" ]; then
+  source "$HOME/.enhancd/zsh/enhancd.zsh"
+fi
+
