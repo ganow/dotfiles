@@ -1,0 +1,4 @@
+function gaws-instance () {
+  aws ec2 describe-instances --filter "Name=tag-value,Values=$1"
+}
+
