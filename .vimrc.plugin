@@ -1,3 +1,5 @@
+call neobundle#begin(expand('~/.vim/bundle/'))
+
 NeoBundle 'Shougo/vimproc.vim', {
   \ 'build' : {
   \   'windows' : 'tools\\update-dll-mingw',
@@ -25,4 +27,7 @@ NeoBundle 'mattn/emmet-vim'
 NeoBundle 'kannokanno/previm'
 NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'wting/rust.vim.git'
+NeoBundle 'rust-lang/rust.vim'
+
+call neobundle#end()
 
