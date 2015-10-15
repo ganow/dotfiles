@@ -13,3 +13,5 @@ au BufNewFile,BufRead *.cc setf cpp
 " rust
 au BufNewFile,BufRead *.rs set filetype=rust
 
+" julia
+autocmd FileType julia nested NeoCompleteLock
