@@ -1,5 +1,8 @@
 # enhancd
-if [ -f "$HOME/.enhancd/zsh/enhancd.zsh" ]; then
+
+if [ -f "$HOME/local/src/github.com/b4b4r07/enhancd/enhancd.sh" ]; then
+  source "$HOME/local/src/github.com/b4b4r07/enhancd/enhancd.sh"
+elif [ -f "$HOME/.enhancd/zsh/enhancd.zsh" ]; then
   source "$HOME/.enhancd/zsh/enhancd.zsh"
 fi
 
