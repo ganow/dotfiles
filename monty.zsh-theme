@@ -23,7 +23,19 @@ GIT_CLEAN_COLOR=$FG[118]
 GIT_PROMPT_INFO=$FG[117]
 PYENV_PROMPT_INFO=$FG[117]
 
-PROMPT='%{$FG[220]%}%M %{$PROMPT_SUCCESS_COLOR%}%(5~,%-1~/.../%2~,%~)%{$reset_color%}%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PYENV_PROMPT_INFO%}$(_pyenv_prompt_info)%{$reset_color%}%{$PROMPT_PROMPT%}ᐅ%{$reset_color%} '
+case $(hostname) in
+hpcs01*) # enatsu
+  HOSTCOLOR=$FG[009]
+  ;;
+localhost.localdomain) # yujiro
+  HOSTCOLOR=$FG[202]
+  ;;
+odin*|baldur*) # locam mac
+  HOSTCOLOR=$FG[046]
+  ;;
+esac
+
+PROMPT='%{$HOSTCOLOR%}%M %{$PROMPT_SUCCESS_COLOR%}%(5~,%-1~/.../%2~,%~)%{$reset_color%}%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PYENV_PROMPT_INFO%}$(_pyenv_prompt_info)%{$reset_color%}%{$PROMPT_PROMPT%}ᐅ%{$reset_color%} '
 
 #RPS1="${return_code}"
 
