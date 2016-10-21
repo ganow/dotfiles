@@ -33,6 +33,9 @@ localhost.localdomain) # yujiro
 odin*|baldur*) # locam mac
   HOSTCOLOR=$FG[046]
   ;;
+cosmos*) # emcjpn
+  HOSTCOLOR=$FG[089]
+  ;;
 esac
 
 PROMPT='%{$HOSTCOLOR%}%M %{$PROMPT_SUCCESS_COLOR%}%(5~,%-1~/.../%2~,%~)%{$reset_color%}%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(git_prompt_status) %{$reset_color%}%{$PYENV_PROMPT_INFO%}$(_pyenv_prompt_info)%{$reset_color%}%{$PROMPT_PROMPT%}ᐅ%{$reset_color%} '
