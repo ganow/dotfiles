@@ -30,7 +30,7 @@ hpcs01*) # enatsu
 localhost.localdomain) # yujiro
   HOSTCOLOR=$FG[202]
   ;;
-odin*|baldur*) # locam mac
+odin*|baldur*|forseti*) # locam mac
   HOSTCOLOR=$FG[046]
   ;;
 cosmos*) # emcjpn
