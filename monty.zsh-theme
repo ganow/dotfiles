@@ -25,16 +25,19 @@ PYENV_PROMPT_INFO=$FG[117]
 
 case $(hostname) in
 hpcs01*) # enatsu
-  HOSTCOLOR=$FG[009]
+  HOSTCOLOR=$FG[009] # pink
+  ;;
+s39*) # steak
+  HOSTCOLOR=$FG[152] # light blue
   ;;
 localhost.localdomain) # yujiro
-  HOSTCOLOR=$FG[202]
+  HOSTCOLOR=$FG[202] # orange
   ;;
 odin*|baldur*|forseti*) # locam mac
-  HOSTCOLOR=$FG[046]
+  HOSTCOLOR=$FG[046] # green
   ;;
 cosmos*) # emcjpn
-  HOSTCOLOR=$FG[089]
+  HOSTCOLOR=$FG[089] # purple
   ;;
 esac
 
