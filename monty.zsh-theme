@@ -27,7 +27,7 @@ case $(hostname) in
 hpcs01*) # enatsu
   HOSTCOLOR=$FG[009] # pink
   ;;
-s39*) # steak
+s39*) # zabuton
   HOSTCOLOR=$FG[152] # light blue
   ;;
 localhost.localdomain) # yujiro
