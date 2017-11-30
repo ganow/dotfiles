@@ -36,8 +36,8 @@ localhost.localdomain) # yujiro
 odin*|baldur*|forseti*) # locam mac
   HOSTCOLOR=$FG[046] # green
   ;;
-cosmos*) # emcjpn
-  HOSTCOLOR=$FG[089] # purple
+dgx-1) # masason
+  HOSTCOLOR=$FG[007] # gray
   ;;
 esac
 
