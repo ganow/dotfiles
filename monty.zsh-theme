@@ -33,7 +33,7 @@ s39*) # zabuton
 localhost.localdomain) # yujiro
   HOSTCOLOR=$FG[202] # orange
   ;;
-odin*|baldur*|forseti*) # locam mac
+odin*|baldur*|forseti*|hermod*) # local mac
   HOSTCOLOR=$FG[046] # green
   ;;
 dgx-1) # masason
