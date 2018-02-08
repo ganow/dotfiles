@@ -83,12 +83,12 @@ endif
 let g:vimfiler_as_default_explorer = 1
 
 
-"""""""""""""""""""""""""
-""" Theme, railscasts """
-"""""""""""""""""""""""""
+"""""""""""""""""""
+""" Theme, nord """
+"""""""""""""""""""
 
 set t_Co=256
-colorscheme railscasts
+colorscheme nord
 
 
 """"""""""""""""
@@ -212,3 +212,8 @@ function! MyGitGutter()
   return join(ret, ' ')
 endfunction
 
+"""""""""""""""""
+""" NerdTree  """
+"""""""""""""""""
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
