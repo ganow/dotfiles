@@ -29,7 +29,7 @@ NeoBundle 'tyru/open-browser.vim'
 NeoBundle 'wting/rust.vim.git'
 NeoBundle 'rust-lang/rust.vim'
 NeoBundle 'JuliaLang/julia-vim'
-NeoBundle 'arcticicestudio/nord-vim'
+NeoBundle 'arcticicestudio/nord-vim', { 'on': 'NERDTreeToggle' }
 NeoBundle 'scrooloose/nerdtree'
 
 call neobundle#end()

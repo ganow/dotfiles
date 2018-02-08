@@ -46,6 +46,7 @@ set number
 set cursorline
 set cursorcolumn
 set colorcolumn=80,110
+set termguicolors
 " colorscheme desert
 if has("mouse")
   set mouse=a
