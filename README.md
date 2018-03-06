@@ -29,6 +29,7 @@ ln -s $ZDOTDIR/.zshrc ~/.zshrc
 ln -s $ZDOTDIR/.vimrc ~/.vimrc
 ln -s $ZDOTDIR/.tmux.conf ~/.tmux.conf
 ln -s $ZDOTDIR/powerline.zsh-theme ~/.oh-my-zsh/custom/powerline.zsh-theme
+ln -s $ZDOTDIR/pycodestyle ~/.config/pycodestyle
 ```
 
 ### enable italic font
@@ -36,4 +37,3 @@ ln -s $ZDOTDIR/powerline.zsh-theme ~/.oh-my-zsh/custom/powerline.zsh-theme
 ```shell
 tic -o ~/.terminfo xterm-256color-italic.terminfo
 ```
-
