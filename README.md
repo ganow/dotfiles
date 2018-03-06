@@ -29,7 +29,14 @@ ln -s $ZDOTDIR/.zshrc ~/.zshrc
 ln -s $ZDOTDIR/.vimrc ~/.vimrc
 ln -s $ZDOTDIR/.tmux.conf ~/.tmux.conf
 ln -s $ZDOTDIR/powerline.zsh-theme ~/.oh-my-zsh/custom/powerline.zsh-theme
+```
+
+### link configuration files for Python lint.
+
+```shell
 ln -s $ZDOTDIR/pycodestyle ~/.config/pycodestyle
+mkdir ~/.config/yapf
+ln -s $ZDOTDIR/.style.yapf ~/.config/yapf/style
 ```
 
 ### enable italic font

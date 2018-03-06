@@ -1,0 +1,9 @@
+[style]
+based_on_style = google
+spaces_before_comment = 2
+split_before_logical_operator = true
+indent_width = 2
+coalesce_brackets = true
+column_limit = 110
+continuation_indent_width = 2
+dedent_closing_brackets = true
