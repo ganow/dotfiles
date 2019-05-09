@@ -14,6 +14,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # POWERLINE_SHOW_GIT_ON_RIGHT="true"
 
 # [powerline9k] prompt settings
+POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
