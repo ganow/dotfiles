@@ -14,10 +14,13 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 # POWERLINE_SHOW_GIT_ON_RIGHT="true"
 
 # [powerline9k] prompt settings
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vi_mode)
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(host dir vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs time)
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_to_first_and_last"
+POWERLEVEL9K_HOST_REMOTE_FOREGROUND='white'
+POWERLEVEL9K_HOST_REMOTE_BACKGROUND='red'
+POWERLEVEL9K_VI_MODE_NORMAL_BACKGROUND='darkgreen'
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
