@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv aws docker kubectl zsh-syntax-highlighting)
+plugins=(git pyenv aws docker kubectl vi-mode zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,4 +84,3 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 unsetopt share_history # don't share command hisotry data via another tab
-
