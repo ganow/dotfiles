@@ -14,6 +14,8 @@ pip install --user powerline-status
 
 [https://github.com/robbyrussell/oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
+[Nerd Fonts](https://github.com/ryanoasis/nerd-fonts#font-installation)
+
 ### neobundle
 
 ```shell
