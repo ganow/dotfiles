@@ -1,6 +1,10 @@
 DOTFILESDIR := $(HOME)/local/src/github.com/ganow/dotfiles
 
-all: oh-my-zsh neobundle ln python-lint italic-font
+all: local
+
+local: server atom
+
+server:  oh-my-zsh neobundle ln python-lint italic-font
 
 oh-my-zsh:
 	echo 'setup oh-my-zsh'
@@ -15,18 +19,26 @@ neobundle:
 
 ln:
 	echo 'make symlinks for setting files'
-	ln -s $(DOTFILESDIR)/shell/.zshenv ~/.zshenv
-	ln -s $(DOTFILESDIR)/shell/.zshrc ~/.zshrc
-	ln -s $(DOTFILESDIR)/vim/.vimrc ~/.vimrc
-	ln -s $(DOTFILESDIR)/.tmux.conf ~/.tmux.conf
-	ln -s $(DOTFILESDIR)/.latexmkrc ~/.latexmkrc
+	ln -sf $(DOTFILESDIR)/shell/.zshenv ~/.zshenv
+	ln -sf $(DOTFILESDIR)/shell/.zshrc ~/.zshrc
+	ln -sf $(DOTFILESDIR)/vim/.vimrc ~/.vimrc
+	ln -sf $(DOTFILESDIR)/.tmux.conf ~/.tmux.conf
+	ln -sf $(DOTFILESDIR)/.latexmkrc ~/.latexmkrc
 
 python-lint:
 	echo 'setup python lint'
-	ln -s $(DOTFILESDIR)/pycodestyle ~/.config/pycodestyle
+	ln -sf $(DOTFILESDIR)/pycodestyle ~/.config/pycodestyle
 	mkdir -p ~/.config/yapf
-	ln -s $(DOTFILESDIR)/.style.yapf ~/.config/yapf/style
+	ln -sf $(DOTFILESDIR)/.style.yapf ~/.config/yapf/style
 
 italic-font:
 	echo 'enable italic font'
 	tic -o ~/.terminfo $(DOTFILESDIR)/shell/xterm-256color-italic.terminfo
+
+atom:
+	echo 'make symlinks for atom'
+	ln -sf $(DOTFILESDIR)/atom/config.cson ~/.atom/config.cson
+	ln -sf $(DOTFILESDIR)/atom/keymap.cson ~/.atom/keymap.cson
+	ln -sf $(DOTFILESDIR)/atom/styles.less ~/.atom/styles.less
+
+.PHONY: local server oh-my-zsh neobundle ln python-lint italic-font atom
