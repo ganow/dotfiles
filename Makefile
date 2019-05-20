@@ -27,8 +27,8 @@ ln:
 
 python-lint:
 	echo 'setup python lint'
-	ln -sf $(DOTFILESDIR)/pycodestyle ~/.config/pycodestyle
 	mkdir -p ~/.config/yapf
+	ln -sf $(DOTFILESDIR)/pycodestyle ~/.config/pycodestyle
 	ln -sf $(DOTFILESDIR)/.style.yapf ~/.config/yapf/style
 
 italic-font:
