@@ -12,6 +12,10 @@
   "bracket-matcher":
     highlightMatchingLineNumber: true
   core:
+    customFileTypes:
+      "source.toml": [
+        "Pipfile"
+      ]
     disabledPackages: [
       "language-python"
       "markdown-preview"
