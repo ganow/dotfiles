@@ -45,7 +45,7 @@
     emmetCSSAutocomplete: true
   linter: {}
   "linter-ui-default":
-    panelHeight: 596
+    panelHeight: 225
   "markdown-preview-enhanced":
     enableZenMode: true
     openPreviewPaneAutomatically: false
