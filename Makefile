@@ -22,6 +22,7 @@ ln:
 	echo 'make symlinks for setting files'
 	ln -sf $(DOTFILESDIR)/shell/.zshenv ~/.zshenv
 	ln -sf $(DOTFILESDIR)/shell/.zshrc ~/.zshrc
+	ln -sf $(DOTFILESDIR)/shell/.hyper.js ~/.hyper.js
 	ln -sf $(DOTFILESDIR)/vim/.vimrc ~/.vimrc
 	ln -sf $(DOTFILESDIR)/.tmux.conf ~/.tmux.conf
 	ln -sf $(DOTFILESDIR)/.latexmkrc ~/.latexmkrc
