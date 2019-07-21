@@ -3,4 +3,4 @@
 [ -f $ZDOTDIR/.zshrc.profile ] && . $ZDOTDIR/.zshrc.profile
 [ -f $ZDOTDIR/.zshrc.for-enhancd ] && . $ZDOTDIR/.zshrc.for-enhancd
 [ -f $ZDOTDIR/.zshrc.aws ] && . $ZDOTDIR/.zshrc.aws
-
+[ -f $ZDOTDIR/.zshrc.hyper-tab-icons ] && . $ZDOTDIR/.zshrc.hyper-tab-icons
