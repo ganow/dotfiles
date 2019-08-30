@@ -24,15 +24,14 @@
     telemetryConsent: "limited"
     themes: [
       "nord-atom-ui"
-      "atom-material-syntax"
+      "dracula-syntax"
     ]
     titleBar: "custom-inset"
   editor:
-    fontFamily: "SourceCodePro-Regular"
+    fontFamily: "Fira Code"
     fontSize: 15
     invisibles: {}
     scrollPastEnd: true
-    showIndentGuide: true
     showInvisibles: true
   "exception-reporting":
     userId: "398656ad-bdc9-4e13-a07b-e0802dc96add"
@@ -54,7 +53,6 @@
     enableLatexRenderingByDefault: true
   "nord-atom-ui":
     darkerFormFocusEffect: true
-    tabSizing: false
   "seti-syntax":
     themeColor: "Steel"
   "vim-mode-plus":
