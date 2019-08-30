@@ -42,6 +42,11 @@
   "language-babel":
     autoIndentJSX: true
     emmetCSSAutocomplete: true
+  latex:
+    buildOnSave: true
+    engine: "lualatex"
+    opener: "pdf-view"
+    outputDirectory: "build"
   linter: {}
   "linter-ui-default":
     panelHeight: 225
@@ -53,8 +58,11 @@
     enableLatexRenderingByDefault: true
   "nord-atom-ui":
     darkerFormFocusEffect: true
+  "pdf-view":
+    fitToWidthOnOpen: true
   "seti-syntax":
     themeColor: "Steel"
+  "tree-view": {}
   "vim-mode-plus":
     ignoreCaseForSearch: true
     useSmartcaseForSearch: true
