@@ -43,8 +43,8 @@
     autoIndentJSX: true
     emmetCSSAutocomplete: true
   latex:
-    buildOnSave: true
     engine: "lualatex"
+    moveResultToSourceDirectory: false
     opener: "pdf-view"
     outputDirectory: "build"
   linter: {}
