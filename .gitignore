@@ -1,4 +1,4 @@
 .zshrc.profile
 .zcompdump*
 shell/.zsh_history
-
+.zsh_sessions/
