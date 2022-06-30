@@ -1,4 +1,4 @@
-
+export FUZZY_FINDER=peco
 
 ## select-history
 function peco-select-history() {
@@ -10,7 +10,7 @@ function peco-select-history() {
   fi
   BUFFER=$(\history -n 1 | \
     eval $tac | \
-    peco --query "$LBUFFER")
+    $FUZZY_FINDER --query "$LBUFFER")
   CURSOR=$#BUFFER
   zle clear-screen
 }
@@ -19,7 +19,7 @@ bindkey '^r' peco-select-history
 
 ## pushd
 function peco-pushd() {
-  eval cd $(pushd | sed -e "s/ /\n/g" | peco)
+  eval cd $(pushd | sed -e "s/ /\n/g" | $FUZZY_FINDER)
   zle reset-prompt
 }
 zle -N peco-pushd
@@ -27,7 +27,7 @@ bindkey "^a" peco-pushd
 
 ## src
 function peco-src () {
-  local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+  local selected_dir=$(ghq list --full-path | $FUZZY_FINDER --query "$LBUFFER")
   if [ -n "$selected_dir" ]; then
     BUFFER="cd ${selected_dir}"
     zle accept-line
@@ -39,7 +39,7 @@ bindkey '^s' peco-src
 
 ## function-list
 function peco-function-list () {
-  local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | peco --query "$LBUFFER")
+  local selected=$(functions | grep "^.*\ ()\ {" | sed -e "s| () {||" | grep peco- | grep -v function-list | $FUZZY_FINDER --query "$LBUFFER")
   if [ -n "$selected" ]; then
     ${selected}
   fi
@@ -54,7 +54,7 @@ function peco-cd() {
   local dir
   if [ ! -t 0 ]; then
     var=$(cat -)
-    dir=$(echo -n $var | peco)
+    dir=$(echo -n $var | $FUZZY_FINDER)
   else
     return 1
   fi
@@ -74,7 +74,7 @@ function peco-open() {
   local command="open"
   if [ ! -t 0 ]; then
     var=$(cat -)
-    file=$(echo -n $var | peco)
+    file=$(echo -n $var | $FUZZY_FINDER)
   else
     return 1
   fi
@@ -97,9 +97,9 @@ function peco-git-diff() {
   if [[ $? == 0 ]]; then
     local target
     if [[ $# -eq 0 ]]; then
-      target=$(git diff --stat $(git symbolic-ref HEAD 2>/dev/null) | peco | awk '{print $1}')
+      target=$(git diff --stat $(git symbolic-ref HEAD 2>/dev/null) | $FUZZY_FINDER | awk '{print $1}')
     else
-      target=$(git diff --stat $1 | peco | awk '{print $1}')
+      target=$(git diff --stat $1 | $FUZZY_FINDER | awk '{print $1}')
     fi
     if [[ -n $target ]]; then
       vimdiff <(git show $1:$target) $target
