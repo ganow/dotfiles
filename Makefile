@@ -27,6 +27,7 @@ ln:
 	ln -sf $(DOTFILESDIR)/vim/.vimrc ~/.vimrc
 	ln -sf $(DOTFILESDIR)/.tmux.conf ~/.tmux.conf
 	ln -sf $(DOTFILESDIR)/.latexmkrc ~/.latexmkrc
+	mkdir -p ~/.config/zellij && ln -sf $(DOTFILESDIR)/zellij-config.kdl ~/.config/zellij/config.kdl
 
 python-lint:
 	echo 'setup python lint'
