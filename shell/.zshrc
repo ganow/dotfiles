@@ -12,6 +12,7 @@ fi
 [ -f $ZDOTDIR/.zshrc.aws ] && . $ZDOTDIR/.zshrc.aws
 [ -f $ZDOTDIR/.zshrc.hyper-tab-icons ] && . $ZDOTDIR/.zshrc.hyper-tab-icons
 [ -f $ZDOTDIR/.zshrc.completions ] && . $ZDOTDIR/.zshrc.completions
+[ -f $ZDOTDIR/.zshrc.post-completions ] && . $ZDOTDIR/.zshrc.post-completions
 
 # To customize prompt, run `p10k configure` or edit $ZDOTDIR/.p10k.zsh.
 [[ ! -f $ZDOTDIR/.p10k.zsh ]] || source $ZDOTDIR/.p10k.zsh
