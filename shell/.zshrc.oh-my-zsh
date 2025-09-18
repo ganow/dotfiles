@@ -46,7 +46,8 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pyenv aws docker kubectl minikube vi-mode zsh-syntax-highlighting zsh-autosuggestions poetry)
+# plugins=(git pyenv aws docker kubectl minikube vi-mode zsh-syntax-highlighting zsh-autosuggestions poetry)
+plugins=(git vi-mode virtualenv zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
