@@ -1,3 +1,5 @@
+command_timeout = 1000
+
 right_format = """$time"""
 
 [aws]
@@ -13,11 +15,11 @@ Ubuntu = " "
 Windows = " "
 
 [python]
-python_binary = ["uvx-python", "python3", "python", "python2"]
-# uvx-python should be like this:
+python_binary = ["uv-run-python", "python3", "python", "python2"]
+# uv-run-python should be like this:
 # ```
 # #!/usr/bin/env bash
-# uvx python "$@"
+# uv run python "$@"
 # ```
 
 [time]
