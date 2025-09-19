@@ -5,6 +5,12 @@ right_format = """$time"""
 [aws]
 disabled = true
 
+[directory]
+read_only = " 󰌾"
+
+[hostname]
+ssh_symbol = " "
+
 [os]
 disabled = false
 [os.symbols]
@@ -13,6 +19,9 @@ Macos = " "
 Linux = " "
 Ubuntu = " "
 Windows = " "
+
+[package]
+symbol = "󰏗 "
 
 [python]
 disabled = true
@@ -24,6 +33,12 @@ symbol = " "
 detect_extensions = ['py', 'ipynb']
 detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'uv.lock', 'pylock.toml']
 style = "bold yellow"
+
+[rlang]
+symbol = "󰟔 "
+
+[rust]
+symbol = "󱘗 "
 
 [time]
 disabled = false
