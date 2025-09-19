@@ -33,7 +33,10 @@ hooks.post = "bindkey '^e' autosuggest-accept"
 [plugins.omz-git]
 github = "ohmyzsh/ohmyzsh"
 apply = ["defer"]
-use = ["plugins/git/git.plugin.zsh"]
+use = [
+    "lib/git.zsh",
+    "plugins/git/git.plugin.zsh",
+]
 
 [plugins.omz-common-aliases]
 github = "ohmyzsh/ohmyzsh"

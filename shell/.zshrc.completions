@@ -19,3 +19,8 @@ fi
 if command -v sheldon >/dev/null 2>&1; then
   eval "$(sheldon completions --shell zsh)"
 fi
+
+# VS Code completions
+if command -v code >/dev/null 2>&1; then
+  . "$(code --locate-shell-integration-path zsh)"
+fi
