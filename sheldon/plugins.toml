@@ -36,3 +36,4 @@ use = ["plugins/git/git.plugin.zsh"]
 [plugins.enhancd]
 github = "babarot/enhancd"
 apply = ["defer"]
+hooks.pre = "autoload -U compinit && compinit"
