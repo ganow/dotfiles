@@ -15,12 +15,15 @@ Ubuntu = " "
 Windows = " "
 
 [python]
-python_binary = ["uv-run-python", "python3", "python", "python2"]
-# uv-run-python should be like this:
-# ```
-# #!/usr/bin/env bash
-# uv run python "$@"
-# ```
+disabled = true
+
+[custom.uv_python]
+command = 'uv python find --show-version'
+format = 'via [${symbol}(${output} )]($style)'
+symbol = " "
+detect_extensions = ['py', 'ipynb']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'uv.lock', 'pylock.toml']
+style = "bold yellow"
 
 [time]
 disabled = false
