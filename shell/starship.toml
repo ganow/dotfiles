@@ -12,5 +12,13 @@ Linux = " "
 Ubuntu = " "
 Windows = " "
 
+[python]
+python_binary = ["uvx-python", "python3", "python", "python2"]
+# uvx-python should be like this:
+# ```
+# #!/usr/bin/env bash
+# uvx python "$@"
+# ```
+
 [time]
 disabled = false
