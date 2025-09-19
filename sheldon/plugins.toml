@@ -27,6 +27,12 @@ apply = ["defer"]
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
+hooks.post = "bindkey '^e' autosuggest-accept"
+
+[plugins.zsh-autocomplete]
+github = "marlonrichert/zsh-autocomplete"
+# apply = ["defer"]
+hooks.post = "bindkey '^I' menu-select && bindkey \"$terminfo[kcbt]\" menu-select"
 
 [plugins.omz-git]
 github = "ohmyzsh/ohmyzsh"

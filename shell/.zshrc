@@ -29,9 +29,6 @@ setopt HIST_SAVE_NO_DUPS      # Do not write a duplicate event to the history fi
 setopt HIST_VERIFY            # Do not execute immediately upon history expansion.
 setopt HIST_BEEP              # Beep when accessing non-existent history.
 
-# [zsh-autosuggestions]
-bindkey '^e' autosuggest-accept
-
 [ -f $ZDOTDIR/.zshrc.alias ] && zsh-defer source $ZDOTDIR/.zshrc.alias
 [ -f $ZDOTDIR/.zshrc.for-peco ] && zsh-defer source $ZDOTDIR/.zshrc.for-peco
 [ -f $ZDOTDIR/.zshrc.profile ] && zsh-defer source $ZDOTDIR/.zshrc.profile
