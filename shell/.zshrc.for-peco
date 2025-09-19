@@ -1,11 +1,5 @@
 export FUZZY_FINDER=peco
 
-# Disable flow control to use Ctrl-S/Ctrl-Q for other purposes (e.g. fzf)
-if [[ -t 1 ]]; then
-  stty -ixon -ixoff
-fi
-unsetopt FLOWCONTROL
-
 ## select-history
 function peco-select-history() {
   local tac
