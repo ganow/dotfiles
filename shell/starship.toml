@@ -1,0 +1,16 @@
+right_format = """$time"""
+
+[aws]
+disabled = true
+
+[os]
+disabled = false
+[os.symbols]
+CentOS = " "
+Macos = " "
+Linux = " "
+Ubuntu = " "
+Windows = " "
+
+[time]
+disabled = false

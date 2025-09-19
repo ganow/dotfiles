@@ -1,14 +1,11 @@
 DOTFILESDIR := $(HOME)/local/src/github.com/ganow/dotfiles
 
-all: oh-my-zsh vim ln python-lint italic-font
+all: shell vim ln python-lint italic-font
 
-oh-my-zsh:
-	echo 'setup oh-my-zsh'
-	sh -c "$$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-	git clone git@github.com:zsh-users/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
-	git clone git@github.com:zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-	git clone git@github.com:bhilburn/powerlevel9k ~/.oh-my-zsh/custom/themes/powerlevel9k
-	git clone --depth=1 git@github.com:romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+zsh:
+	echo 'setup shell'
+	cargo install sheldon
+	cargo install starship --locked
 
 vim:
 	echo 'setup neovim'
@@ -21,7 +18,7 @@ ln:
 	echo 'make symlinks for setting files'
 	ln -sf $(DOTFILESDIR)/shell/.zshenv ~/.zshenv
 	ln -sf $(DOTFILESDIR)/shell/.zshrc ~/.zshrc
-	ln -sf $(DOTFILESDIR)/shell/.hyper.js ~/.hyper.js
+	ln -sf $(DOTFILESDIR)/sheldon $(HOME)/.config/sheldon
 	ln -sf $(DOTFILESDIR)/.tmux.conf ~/.tmux.conf
 	ln -sf $(DOTFILESDIR)/.latexmkrc ~/.latexmkrc
 	mkdir -p ~/.config/zellij && ln -sf $(DOTFILESDIR)/zellij-config.kdl ~/.config/zellij/config.kdl
