@@ -20,26 +20,31 @@ defer = "{{ hooks?.pre | nl }}{% for file in files %}zsh-defer source \"{{ file 
 [plugins.zsh-defer]
 github = "romkatv/zsh-defer"
 
-[plugins.zsh-syntax-highlighting]
-github = "zsh-users/zsh-syntax-highlighting"
+[plugins.fzf-tab]
+github = "Aloxaf/fzf-tab"
 apply = ["defer"]
+hooks.pre = "autoload -U compinit && compinit"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
 apply = ["defer"]
 hooks.post = "bindkey '^e' autosuggest-accept"
 
-[plugins.zsh-autocomplete]
-github = "marlonrichert/zsh-autocomplete"
-# apply = ["defer"]
-hooks.post = "bindkey '^I' menu-select && bindkey \"$terminfo[kcbt]\" menu-select"
-
 [plugins.omz-git]
 github = "ohmyzsh/ohmyzsh"
 apply = ["defer"]
 use = ["plugins/git/git.plugin.zsh"]
 
+[plugins.omz-common-aliases]
+github = "ohmyzsh/ohmyzsh"
+apply = ["defer"]
+use = ["plugins/common-aliases/common-aliases.plugin.zsh"]
+
 [plugins.enhancd]
 github = "babarot/enhancd"
 apply = ["defer"]
 hooks.pre = "autoload -U compinit && compinit"
+
+[plugins.zsh-syntax-highlighting]
+github = "zsh-users/zsh-syntax-highlighting"
+apply = ["defer"]
