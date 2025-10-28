@@ -14,7 +14,7 @@ fi
 
 # History settings
 export HISTFILE="${HISTFILE:-${ZDOTDIR:-$HOME}/.zsh_history}" # $XDG_STATE_HOMEにしても良いかも
-export HISTSIZE=10000000
+export HISTSIZE=20000
 export SAVEHIST=$HISTSIZE
 
 setopt BANG_HIST              # Treat the '!' character specially during expansion.
