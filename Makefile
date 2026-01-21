@@ -10,8 +10,7 @@ zsh:
 vim:
 	echo 'setup neovim'
 	mkdir -p ~/.config/nvim
-	git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-	ln -sf $(DOTFILESDIR)/vim/vscode-init.lua ~/.config/nvim/vscode-init.lua
+	git clone https://github.com/NvChad/starter ~/.config/nvim
 	ln -sf $(DOTFILESDIR)/vim/custom ~/.config/nvim/lua/custom
 
 ln:
