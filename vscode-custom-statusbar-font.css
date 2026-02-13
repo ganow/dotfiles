@@ -1,0 +1,4 @@
+/* Force Nerd Font icons in the status bar */
+.monaco-workbench .part.statusbar {
+    font-family: "FiraCode Nerd Font", "FiraCode Nerd Font Mono", "Hack Nerd Font", "Hack Nerd Font Mono", "Cascadia Mono", "Consolas", "Courier New", monospace !important;
+}
