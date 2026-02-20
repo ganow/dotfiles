@@ -22,6 +22,7 @@ on_demand_completion() {
 }
 
 on_demand_completion "uv" "uv generate-shell-completion zsh"
+on_demand_completion "zellij" "zellij setup --generate-completion zsh"
 
 if command -v zoxide >/dev/null 2>&1; then
   eval "$(zoxide init zsh)"
