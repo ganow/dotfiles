@@ -21,6 +21,7 @@ ln:
 	ln -sf $(DOTFILESDIR)/.tmux.conf ~/.tmux.conf
 	ln -sf $(DOTFILESDIR)/.latexmkrc ~/.latexmkrc
 	mkdir -p ~/.config/zellij && ln -sf $(DOTFILESDIR)/zellij-config.kdl ~/.config/zellij/config.kdl
+	mkdir -p ~/.config/ghostty && ln -sf $(DOTFILESDIR)/ghostty/config ~/.config/ghostty/config
 
 python-lint:
 	echo 'setup python lint'
