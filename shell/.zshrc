@@ -43,6 +43,7 @@ unsetopt FLOWCONTROL
 
 # [ -f $ZDOTDIR/.zshrc.alias ] && zsh-defer source $ZDOTDIR/.zshrc.alias
 [ -f $ZDOTDIR/.zshrc.for-peco ] && zsh-defer source $ZDOTDIR/.zshrc.for-peco
+[ -f $ZDOTDIR/.zshrc.for-yazi ] && zsh-defer source $ZDOTDIR/.zshrc.for-yazi
 [ -f $ZDOTDIR/.zshrc.profile ] && zsh-defer source $ZDOTDIR/.zshrc.profile
 [ -f $ZDOTDIR/.zshrc.completions ] && zsh-defer source $ZDOTDIR/.zshrc.completions
 
