@@ -2,6 +2,13 @@ DOTFILESDIR := $(HOME)/local/src/github.com/ganow/dotfiles
 
 all: shell vim ln python-lint italic-font
 
+claude:
+	echo 'setup claude'
+	mkdir -p ~/.claude
+	ln -sf $(DOTFILESDIR)/claude/settings.json ~/.claude/settings.json
+	mkdir -p ~/.config/claude-powerline
+	ln -sf $(DOTFILESDIR)/claude-powerline/config.json ~/.config/claude-powerline/config.json
+
 zsh:
 	echo 'setup shell'
 	cargo install sheldon
@@ -32,4 +39,4 @@ italic-font:
 	echo 'enable italic font'
 	tic -o ~/.terminfo $(DOTFILESDIR)/shell/xterm-256color-italic.terminfo
 
-.PHONY: local server oh-my-zsh vim ln python-lint italic-font
+.PHONY: all claude zsh vim ln python-lint italic-font
