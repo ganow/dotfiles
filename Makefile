@@ -9,9 +9,8 @@ zsh:
 
 vim:
 	echo 'setup neovim'
-	mkdir -p ~/.config/nvim
-	git clone https://github.com/NvChad/starter ~/.config/nvim
-	ln -sf $(DOTFILESDIR)/vim/custom ~/.config/nvim/lua/custom
+	mkdir -p ~/.config
+	ln -sf $(DOTFILESDIR)/nvim ~/.config/nvim
 
 ln:
 	echo 'make symlinks for setting files'
