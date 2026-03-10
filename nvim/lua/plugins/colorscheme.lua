@@ -4,7 +4,11 @@ return {
     name = "catppuccin",
     priority = 1000,
     opts = {
-      flavour = "mocha",
+      flavour = "macchiato",
+      background = {
+        light = "latte",
+        dark = "macchiato",
+      },
       transparent_background = true,
       float = {
         transparent = true,
