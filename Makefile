@@ -6,8 +6,7 @@ claude:
 	echo 'setup claude'
 	mkdir -p ~/.claude
 	ln -sf $(DOTFILESDIR)/claude/settings.json ~/.claude/settings.json
-	mkdir -p ~/.config/claude-powerline
-	ln -sf $(DOTFILESDIR)/claude-powerline/config.json ~/.config/claude-powerline/config.json
+	ln -sf $(DOTFILESDIR)/claude/statusline-command.sh ~/.claude/statusline-command.sh
 
 zsh:
 	echo 'setup shell'
