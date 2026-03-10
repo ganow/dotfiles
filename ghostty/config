@@ -1,6 +1,22 @@
-unfocused-split-opacity = 0.5
+########################################
+# Visual appearance
+########################################
+
+# Layout
 window-padding-x = 8
 window-padding-y = 2,5
+
+# Font
 font-size = 15
 font-family = "Hack Nerd Font Mono"
 font-family = "BIZ UDGothic"
+
+# Opacity
+unfocused-split-opacity = 0.5
+background-opacity = 0.8
+
+########################################
+# Keybind
+########################################
+
+keybind = cmd+u=toggle_background_opacity
