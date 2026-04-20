@@ -47,7 +47,32 @@ unsetopt FLOWCONTROL
 [ -f $ZDOTDIR/.zshrc.profile ] && zsh-defer source $ZDOTDIR/.zshrc.profile
 [ -f $ZDOTDIR/.zshrc.completions ] && zsh-defer source $ZDOTDIR/.zshrc.completions
 
+typeset -g STARSHIP_CONFIG_DEFAULT=$ZDOTDIR/starship.toml
+typeset -g STARSHIP_CONFIG_ANNEX=$ZDOTDIR/starship-annex.toml
+
+is_annex_repo() {
+  local git_dir
+  git_dir=$(command git rev-parse --git-dir 2>/dev/null) || return 1
+
+  # If git_dir is not an absolute path, prepend the current working directory
+  [[ "$git_dir" = /* ]] || git_dir="$PWD/$git_dir"
+
+  [[ -d "$git_dir/annex" ]]
+}
+
+update_starship_config() {
+  if is_annex_repo; then
+    export STARSHIP_CONFIG="$STARSHIP_CONFIG_ANNEX"
+  else
+    export STARSHIP_CONFIG="$STARSHIP_CONFIG_DEFAULT"
+  fi
+}
+
+autoload -Uz add-zsh-hook
+add-zsh-hook chpwd update_starship_config
+add-zsh-hook precmd update_starship_config
+
 if command -v starship >/dev/null 2>&1; then
-  export STARSHIP_CONFIG=$ZDOTDIR/starship.toml
+  update_starship_config
   eval "$(starship init zsh)"
 fi

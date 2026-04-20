@@ -1,0 +1,47 @@
+command_timeout = 1000
+
+right_format = """$time"""
+
+[git_status]
+disabled = true
+
+[aws]
+disabled = true
+
+[directory]
+read_only = " 󰌾"
+
+[hostname]
+ssh_symbol = " "
+
+[os]
+disabled = false
+[os.symbols]
+CentOS = " "
+Macos = " "
+Linux = " "
+Ubuntu = " "
+Windows = " "
+
+[package]
+symbol = "󰏗 "
+
+[python]
+disabled = true
+
+[custom.uv_python]
+command = 'uv python find --show-version'
+format = 'via [${symbol}(${output} )]($style)'
+symbol = " "
+detect_extensions = ['py', 'ipynb']
+detect_files = ['.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini', 'uv.lock', 'pylock.toml']
+style = "bold yellow"
+
+[rlang]
+symbol = "󰟔 "
+
+[rust]
+symbol = "󱘗 "
+
+[time]
+disabled = false
