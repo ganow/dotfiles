@@ -19,5 +19,10 @@
       }
     }
   },
-  "advisorModel": "opus"
+  "effortLevel": "medium",
+  "advisorModel": "opus",
+  "editorMode": "vim",
+  "remoteControlAtStartup": true,
+  "skipAutoPermissionPrompt": true,
+  "agentPushNotifEnabled": true
 }

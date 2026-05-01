@@ -5,6 +5,7 @@ all: shell vim ln python-lint italic-font
 claude:
 	echo 'setup claude'
 	mkdir -p ~/.claude
+	ln -sf $(DOTFILESDIR)/claude/CLAUDE.md ~/.claude/CLAUDE.md
 	ln -sf $(DOTFILESDIR)/claude/settings.json ~/.claude/settings.json
 	ln -sf $(DOTFILESDIR)/claude/statusline-command.sh ~/.claude/statusline-command.sh
 
