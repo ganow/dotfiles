@@ -8,6 +8,10 @@ disabled = true
 [aws]
 disabled = true
 
+[nix_shell]
+heuristic = true
+unknown_msg = 'nix'
+
 [directory]
 read_only = " 󰌾"
 
