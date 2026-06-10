@@ -19,7 +19,6 @@
       }
     }
   },
-  "effortLevel": "medium",
   "advisorModel": "opus",
   "editorMode": "vim",
   "remoteControlAtStartup": true,
