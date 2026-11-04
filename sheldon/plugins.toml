@@ -23,7 +23,6 @@ github = "romkatv/zsh-defer"
 [plugins.fzf-tab]
 github = "Aloxaf/fzf-tab"
 apply = ["defer"]
-hooks.pre = "autoload -U compinit && compinit"
 
 [plugins.zsh-autosuggestions]
 github = "zsh-users/zsh-autosuggestions"
@@ -46,7 +45,6 @@ use = ["plugins/common-aliases/common-aliases.plugin.zsh"]
 [plugins.enhancd]
 github = "babarot/enhancd"
 apply = ["defer"]
-hooks.pre = "autoload -U compinit && compinit"
 
 [plugins.zsh-syntax-highlighting]
 github = "zsh-users/zsh-syntax-highlighting"

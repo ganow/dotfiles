@@ -1,6 +1,3 @@
-autoload -U compinit
-compinit
-
 # c.f. https://zenn.dev/mutex_inc/articles/2a6e8bd560ac0e#%E9%81%85%E5%BB%B6%E8%A9%95%E4%BE%A1%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95
 
 on_demand_completion() {

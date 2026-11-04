@@ -2,15 +2,26 @@
 if command -v sheldon >/dev/null 2>&1; then
   cache_dir=${XDG_CACHE_HOME:-$HOME/.cache}
   sheldon_cache="$cache_dir/sheldon.zsh"
-  sheldon_toml="$HOME/.config/sheldon/plugins.toml"
-  # Make cache only when the cache file doesn't exist or the toml file is newer than the cache file
-  if [[ ! -r "$sheldon_cache" || "$sheldon_toml" -nt "$sheldon_cache" ]]; then
-    mkdir -p $cache_dir
-    sheldon source > $sheldon_cache
+  sheldon_toml="${XDG_CONFIG_HOME:-$HOME/.config}/sheldon/plugins.toml"
+  sheldon_snapshot="$cache_dir/sheldon.toml.snapshot"
+  # Regenerate the cache only when the toml content differs from the one it was generated from.
+  # Relock at the same time so that the lock file always matches the new config.
+  if [[ ! -r "$sheldon_cache" || ! -r "$sheldon_snapshot" \
+        || "$(<$sheldon_toml)" != "$(<$sheldon_snapshot)" ]]; then
+    mkdir -p "$cache_dir"
+    if sheldon source --relock >| "$sheldon_cache.tmp"; then
+      mv -f "$sheldon_cache.tmp" "$sheldon_cache"
+      print -r -- "$(<$sheldon_toml)" >| "$sheldon_snapshot"
+    fi
   fi
   source "$sheldon_cache"
-  unset cache_dir sheldon_cache sheldon_toml
+  unset cache_dir sheldon_cache sheldon_toml sheldon_snapshot
 fi
+
+# Initialize the completion system exactly once.
+# This must run before deferred plugins (e.g. fzf-tab, enhancd) are loaded,
+# and must not be re-run afterwards, since compinit resets compdef registrations.
+autoload -Uz compinit && compinit
 
 # History settings
 export HISTFILE="${HISTFILE:-${ZDOTDIR:-$HOME}/.zsh_history}" # $XDG_STATE_HOMEにしても良いかも
