@@ -8,6 +8,7 @@ disabled = true
 [nix_shell]
 heuristic = true
 unknown_msg = 'nix'
+symbol = " "
 
 [directory]
 read_only = " 󰌾"
